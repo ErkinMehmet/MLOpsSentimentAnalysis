@@ -1,7 +1,7 @@
 In this project, we did experiments using MLFlow to explore the better ML model on Jupyter Workbook. EC2 and S3 are needed on AWS.
 After that, we build the dvc pipeline and Python codes, to automatically process data, build model, train model and register model
 We built a Flask Api and a frontend. (Google Cloud Api key needed) Then we upload the unpacked folder to Chrome extensions to add the plug-in.
-Finally, we look at Docker and K8s for CICD.
+Finally, we look at Docker and github action for CICD.
 
 
 To be able to access MLFlow, we need to set up the server (virtual machine and volume) on ACW
@@ -68,7 +68,7 @@ AWS-CICD-Deployment-with-Github-Actions
 
 2. AmazonEC2FullAccess
 3. Create ECR repo to store/save docker image
-- Save the URI: 315865595366.dkr.ecr.us-east-1.amazonaws.com/youtube
+961911963392.dkr.ecr.ca-central-1.amazonaws.com/mlproject
 4. Create EC2 machine (Ubuntu)
 5. Open EC2 and Install docker in EC2 Machine:
 #optinal
