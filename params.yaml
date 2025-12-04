@@ -1,3 +1,6 @@
+global:
+  tracking_url : "http://ec2-15-222-29-84.ca-central-1.compute.amazonaws.com:5000/"
+  experiment_name : "dvc-pipeline-runs"
 data_ingestion:
   test_size: 0.2
 model_building:

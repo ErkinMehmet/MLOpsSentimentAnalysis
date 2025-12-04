@@ -170,3 +170,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 /experiment_info.json
+/model_info.json

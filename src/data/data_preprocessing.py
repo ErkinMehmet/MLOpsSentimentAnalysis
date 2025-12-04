@@ -4,20 +4,10 @@ import os,re,nltk,string,logging
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.model_selection import train_test_split
-
+from src.utils.logger import get_logger
 
 # logging configuration
-logger=logging.getLogger('data_preprocessing')
-logger.setLevel('DEBUG')
-console_handler=logging.StreamHandler()
-console_handler.setLevel('DEBUG')
-file_handler=logging.FileHandler('data_preprocessing.log')
-file_handler.setLevel('ERROR')
-formatter=logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-file_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
-logger.addHandler(file_handler)
+logger = get_logger("data_preprocessing")
 
 # Download NLTK resources
 nltk.download('stopwords')

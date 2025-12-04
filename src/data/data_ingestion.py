@@ -1,31 +1,13 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import os,yaml,logging
+import os,yaml,logging,sys
+from src.utils.logger import get_logger
+from src.utils.load import load_params
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 # logging configuration
-logger=logging.getLogger('data_ingestion')
-logger.setLevel('DEBUG')
-console_handler=logging.StreamHandler()
-console_handler.setLevel('DEBUG')
-file_handler=logging.FileHandler('data_ingestion.log')
-file_handler.setLevel('ERROR')
-formatter=logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-file_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
-logger.addHandler(file_handler)
-
-def load_params(path:str) -> dict:
-    """Load parameters from a YAML file."""
-    try:
-        with open(path, "r") as f:
-            params = yaml.safe_load(f)
-        logger.debug("Parameters loaded successfully.")
-        return params
-    except Exception as e:
-        logger.error(f"Error loading parameters: {e}")
-        return {}
+logger = get_logger("data_ingestion")
 
 def load_data(data_url:str) -> pd.DataFrame:
     """Load data from a CSV file."""
