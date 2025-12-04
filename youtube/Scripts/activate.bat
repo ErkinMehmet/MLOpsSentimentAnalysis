@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\hli\OneDrive - FQM\Bureau\learning\mlops\Sentimeng Insights\youtube
+set VIRTUAL_ENV=C:\Users\hli\OneDrive - FQM\Bureau\learning\mlops\Sentiment Insights\youtube
 
 if not defined PROMPT set PROMPT=$P$G
 

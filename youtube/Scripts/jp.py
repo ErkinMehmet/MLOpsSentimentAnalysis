@@ -1,4 +1,4 @@
-#!C:\Users\hli\OneDrive - FQM\Bureau\learning\mlops\Sentimeng Insights\youtube\Scripts\python.exe
+#!C:\Users\hli\OneDrive - FQM\Bureau\learning\mlops\Sentiment Insights\youtube\Scripts\python.exe
 
 import sys
 import json
